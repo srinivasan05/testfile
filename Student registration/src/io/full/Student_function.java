@@ -6,7 +6,7 @@ import java.util.InputMismatchException;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Student_function {
+public class Student_function extends Student_data {
 	Scanner input = new Scanner(System.in);
 	Map<String, Student_data> map = new HashMap<String, Student_data>();
 
@@ -52,8 +52,7 @@ public class Student_function {
 	void update() {
 		try {
 		if (!map.isEmpty()) {
-			System.out.println("Enter the I_D to Update");
-			if (map.containsKey(input.nextLine())) {
+			
 				Update_module update_module = new Update_module();
 				System.out.println("1: Edit the I_d");
 				System.out.println("2: Edit the Name");
@@ -88,9 +87,7 @@ public class Student_function {
 				
 				}
 
-			} else {
-				System.out.println("Sorry your data not present in the list...!");
-			}
+			
 
 		} else {
 			System.out.println("Your list is empty...!");
