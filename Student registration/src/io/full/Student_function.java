@@ -6,9 +6,9 @@ import java.util.InputMismatchException;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Student_function extends Student_data {
+public class Student_function implements Studentt_interface  {
 	Scanner input = new Scanner(System.in);
-	Map<String, Student_data> map = new HashMap<String, Student_data>();
+	
 
 	void create() {
 
@@ -54,30 +54,29 @@ public class Student_function extends Student_data {
 		if (!map.isEmpty()) {
 			
 				Update_module update_module = new Update_module();
-				System.out.println("1: Edit the I_d");
-				System.out.println("2: Edit the Name");
-				System.out.println("3: Edit the Department");
-				System.out.println("4: Edit the Sub");
-				System.out.println("5: Exit from update");
+				
+				System.out.println("1: Edit the Name");
+				System.out.println("2: Edit the Department");
+				System.out.println("3: Edit the Sub");
+				System.out.println("4: Exit from update");
 				while(true) {
 				switch (input.nextInt()) {
-				case 1:
-					update_module.update_id();
-					break;
+				
 
-				case 2:
+				case 1:
 					update_module.update_name();
 					break;
 
-				case 3:
+				case 2:
 					update_module.update_department();
 					break;
 
-				case 4:
+				case 3:
 					update_module.update_sub();
 					break;
-				case 5:
-					System.exit(0);
+				case 4:
+					Student_main ob=new Student_main();
+					ob.test();
 					break;
 
 				default:
@@ -134,4 +133,7 @@ public class Student_function extends Student_data {
 		}
 
 	}
+	
+	
+
 }

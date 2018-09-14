@@ -9,6 +9,13 @@ public class Student_main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+Student_main ob= new Student_main();
+ob.test();
+	}	
+	
+	 void test() {
+		
 		Scanner input = new Scanner(System.in);
 		Student_function student_function = new Student_function();
 		while (true) {
@@ -56,7 +63,7 @@ public class Student_main {
 			}
 
 		}
-
+		
 	}
 
 }

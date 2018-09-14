@@ -30,5 +30,6 @@ public class Student_data {
 	public void setSub(String sub) {
 		this.sub = sub;
 	}
+	
 
 }
