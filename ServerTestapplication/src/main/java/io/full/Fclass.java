@@ -15,16 +15,18 @@ public class Fclass extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) 
       throws IOException {
       
-    response.setContentType("text/html");
-    response.setCharacterEncoding("UTF-8");
+//    response.setContentType("text/html");
+//    response.setCharacterEncoding("UTF-8");
     
     PrintWriter out = response.getWriter();
-    
+    out.print("Testing started");
     String fname=request.getParameter("fname");
     String lname=request.getParameter("lname");
     
     out.println(fname);
     out.println(lname);
+    
+    
     
     
 
